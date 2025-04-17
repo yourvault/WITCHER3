@@ -65,19 +65,22 @@
             100% { transform: translateX(100%); }
         }
 
-        h1 {
-            font-size: 2.5em;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #ffffff;
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 2px 4px rgba(0, 0, 0, 0.5);
-            font-weight: 800;
+        .header-logo {
+            max-width: 300px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
+
+        .header-logo:hover {
+            transform: scale(1.05);
         }
 
         p.subtitle {
             font-size: 1em;
             color: #7b68ee;
-            margin-top: 5px;
+            margin-top: 10px;
             font-weight: 400;
             position: relative;
             display: inline-block;
@@ -312,6 +315,48 @@
             line-height: 1.5;
         }
 
+        .game-nav-section {
+            max-width: 1300px;
+            width: 100%;
+            padding: 40px 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .game-nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .game-nav-btn {
+            display: inline-block;
+            width: 200px;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 800;
+            font-size: 1em;
+            color: #ffffff;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #4b0082, #7b68ee);
+            border: 2px solid #4b0082;
+            box-shadow: 0 0 12px rgba(75, 0, 130, 0.7), inset 0 0 6px rgba(123, 104, 238, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .game-nav-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(75, 0, 130, 0.9);
+        }
+
+        .stacked-text {
+            display: block;
+            line-height: 1.2;
+        }
+
         footer {
             text-align: center;
             padding: 30px 0;
@@ -357,7 +402,9 @@
 </head>
 <body>
     <header>
-        <h1>The Witcher 3 Mobile</h1>
+        <a href="https://infinitetools.site">
+            <img src="https://i.postimg.cc/43k89wN5/Spring.png" alt="The Witcher 3 Mobile Logo" class="header-logo" loading="lazy">
+        </a>
         <p class="subtitle">Hunt Monsters, Forge Your Destiny</p>
     </header>
 
@@ -404,6 +451,19 @@
                 <h3>Choice-Driven Story</h3>
                 <p>Shape Geralt’s journey with decisions that alter the world and its characters.</p>
             </div>
+        </div>
+    </section>
+
+    <section class="game-nav-section">
+        <div class="game-nav-buttons">
+            <a href="https://infinitetools.site/RDR2/" class="game-nav-btn">
+                <span class="stacked-text">Previous</span>
+                <span class="stacked-text">Game</span>
+            </a>
+            <a href="https://infinitetools.site/CYBERPUNK2077/" class="game-nav-btn">
+                <span class="stacked-text">Next</span>
+                <span class="stacked-text">Game</span>
+            </a>
         </div>
     </section>
 
